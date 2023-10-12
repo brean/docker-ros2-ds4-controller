@@ -1,0 +1,15 @@
+services:
+  ds4:
+    # controller
+    build:
+      context: ./ds4/
+      dockerfile: ./Dockerfile
+    privileged: True
+    volumes:
+      - /dev:/dev
+
+  cmd_vel:
+    # output of cmd_vel
+    build:
+      context: ./cmd_vel/
+      dockerfile: ./Dockerfile
