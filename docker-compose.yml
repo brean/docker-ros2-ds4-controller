@@ -1,6 +1,7 @@
 services:
   ds4:
     # controller
+    image: brean/ds4-ros2
     build:
       context: ./ds4/
       dockerfile: ./Dockerfile
