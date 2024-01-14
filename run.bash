@@ -1,2 +1,2 @@
 terminator -g terminator.conf
-docker-compose down
+docker compose down
