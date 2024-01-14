@@ -1,7 +1,7 @@
 services:
   ds4:
     # controller
-    image: brean/ds4-ros2
+    image: brean/ds4-ros2:humble
     build:
       context: ./ds4/
       dockerfile: ./Dockerfile
