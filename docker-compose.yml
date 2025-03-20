@@ -1,10 +1,12 @@
 services:
   ds4:
     # controller
-    image: brean/ds4-ros2:humble
+    image: brean/ds4-ros2:humble_001
     build:
       context: ./ds4/
       dockerfile: ./Dockerfile
+      args:
+        - ROS_DISTRO=humble
     privileged: True
     volumes:
       - /dev:/dev
@@ -12,5 +14,7 @@ services:
   cmd_vel:
     # output of cmd_vel
     build:
+      args:
+        - ROS_DISTRO=humble
       context: ./cmd_vel/
       dockerfile: ./Dockerfile
