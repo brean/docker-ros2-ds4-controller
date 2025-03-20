@@ -1,4 +1,4 @@
-ARG ROS_DISTRO=humble
+ARG ROS_DISTRO
 FROM ros:${ROS_DISTRO}
 
 ENV DEBIAN_FRONTEND=noninteractive
