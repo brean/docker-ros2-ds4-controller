@@ -23,7 +23,7 @@ ENTRYPOINT [ "/ros2_ws_entrypoint.sh" ]
 WORKDIR /opt
 RUN git clone https://github.com/naoki-mizuno/ds4drv --branch devel \
   && cd ds4drv \
-  && python3 setup.py install
+  && pip3 install --break-system-packages .
 
 # Build workspace
 WORKDIR ${COLCON_WS}
