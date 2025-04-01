@@ -9,6 +9,9 @@ Example using docker-compose configuration to integrate the PlayStation Dual Sho
 1. move the stick of your controller. You see the published outtput of the ROS `/cmd_vel`-command on the right
 1. once you close terminator the run.bash-script will stop the docker container by calling `docker-compose down`
 
+## Run only DS4 controller with custom ROS 2 
+ROS_DOMAIN_ID=99 docker compose up ds4
+
 <!--
 TODO: how to change keyboard bindings?
 TODO: more examples

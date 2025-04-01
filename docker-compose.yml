@@ -5,11 +5,17 @@ services:
       context: ./ds4/
       dockerfile: ./Dockerfile
     privileged: True
+    environment:
+      - ROS_DOMAIN_ID=$ROS_DOMAIN_ID
     volumes:
       - /dev:/dev
+    network_mode: host
 
   cmd_vel:
     # output of cmd_vel
     build:
       context: ./cmd_vel/
       dockerfile: ./Dockerfile
+    environment:
+      - ROS_DOMAIN_ID=$ROS_DOMAIN_ID
+    network_mode: host
