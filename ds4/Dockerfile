@@ -33,4 +33,4 @@ RUN mkdir ${COLCON_WS}/src \
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
   colcon build
 
-CMD ["ros2", "launch", "ds4_driver", "ds4_twist.launch.xml", "dof:=2"]
+CMD ["ros2", "launch", "ds4_driver", "ds4_twist.launch.xml", "dof:=2", "stamped:=true"]
